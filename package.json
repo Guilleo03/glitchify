@@ -1,5 +1,5 @@
 {
-  "name": "react-glitchify",
+  "name": "glitchify",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.cjs.js",
@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Guilleo03/react-glitchify"
+    "url": "https://github.com/Guilleo03/glitchify"
   },
   "keywords": [
     "react",
