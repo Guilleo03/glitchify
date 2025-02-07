@@ -2,3 +2,5 @@
 *.map
 src/
 tsconfig.json
+*.stories.*
+dist/**/*.stories.d.ts
