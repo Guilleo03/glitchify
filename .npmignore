@@ -4,3 +4,4 @@ src/
 tsconfig.json
 *.stories.*
 dist/**/*.stories.d.ts
+src/**/*.stories.*
