@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import GlitchImage from './GlitchImage';
+import React from 'react';
 
 const meta: Meta<typeof GlitchImage> = {
   title: 'GlitchImage',

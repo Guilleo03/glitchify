@@ -1,15 +1,20 @@
 {
   "name": "glitchify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
   "files": [
-    "dist/index.cjs.js",
-    "dist/index.esm.js",
-    "dist/index.esm.css",
-    "dist/types",
+    "dist/index.js",
+    "dist/types/index.d.ts",
     "README.md"
   ],
   "repository": {
@@ -30,14 +35,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build": "rollup -c"
-  },
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "build": "rm -rf dist && rollup -c"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",
+    "@rollup/plugin-alias": "^5.1.1",
     "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-typescript": "^12.1.2",
@@ -48,12 +50,12 @@
     "@storybook/react": "^8.5.3",
     "@storybook/react-vite": "^8.5.3",
     "@storybook/test": "^8.5.3",
-    "@types/react": "^19.0.8",
+    "@types/react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "@types/react-dom": "^17.0.0 ||^18.0.0 || ^19.0.0",
     "cssnano": "^7.0.6",
     "postcss": "^8.5.1",
     "postcss-cli": "^11.0.0",
     "rollup": "^4.34.3",
-    "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",

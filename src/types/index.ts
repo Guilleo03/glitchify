@@ -1,10 +1,8 @@
-import { HTMLAttributes } from 'react';
-
 export type GlitchImageType =
   | string
   | { src: string; height: number; width: number; blurDataURL?: string };
 
-export interface IGlitchImage extends HTMLAttributes<HTMLDivElement> {
+export interface IGlitchImage {
   image: GlitchImageType;
   height: string | number;
   width: string | number;

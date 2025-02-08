@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "emitDeclarationOnly": true,
     "target": "es5",
     "lib": ["dom", "es2015"],
     "jsx": "react-jsx",
@@ -9,12 +10,9 @@
     "strict": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "sourceMap": false
   },
   "include": ["src"],
-  "exclude": [
-    "src/**/*.stories.tsx",
-    "src/**/*.stories.d.ts",
-    "src/**/*.stories.*"
-  ]
+  "exclude": ["stories", "**/*.stories.tsx"]
 }
