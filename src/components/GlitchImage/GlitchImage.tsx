@@ -1,5 +1,6 @@
 import './../../styles/styles.css';
 import { IGlitchImage } from '../../types';
+import React from 'react';
 
 const GlitchImage = ({
   width,
