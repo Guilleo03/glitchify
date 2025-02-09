@@ -23,6 +23,18 @@ const GlitchImage = ({
     .filter(Boolean)
     .join(' ');
 
+  const getStyle = (i: number) => {
+    if (i === 0) {
+      return {
+        backgroundImage: `url(${imageSrc})`,
+      };
+    }
+
+    return {
+      maskImage: `url(${imageSrc})`,
+    };
+  };
+
   return (
     <div
       className={classes}
@@ -40,9 +52,7 @@ const GlitchImage = ({
           key={i}
           aria-hidden="true"
           className="glitch-img"
-          style={{
-            maskImage: `url(${imageSrc})`,
-          }}
+          style={getStyle(i)}
         />
       ))}
     </div>
