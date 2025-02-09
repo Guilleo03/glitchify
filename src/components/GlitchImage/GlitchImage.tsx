@@ -40,7 +40,9 @@ const GlitchImage = ({
           key={i}
           aria-hidden="true"
           className="glitch-img"
-          style={{ backgroundImage: `url(${imageSrc})` }}
+          style={{
+            maskImage: `url(${imageSrc})`,
+          }}
         />
       ))}
     </div>
