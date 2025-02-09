@@ -1,5 +1,5 @@
 import { defineConfig } from 'tsup';
-import cssModulesPlugin from 'esbuild-css-modules-plugin';
+import stylePlugin from 'esbuild-style-plugin';
 
 export default defineConfig({
   format: ['cjs', 'esm'],
@@ -9,6 +9,12 @@ export default defineConfig({
   skipNodeModulesBundle: true,
   clean: true,
   minify: true,
-  esbuildPlugins: [cssModulesPlugin()],
+  esbuildPlugins: [
+    stylePlugin({
+      extract: true,
+    }),
+  ],
+  outDir: 'dist',
+  external: ['react'],
   // injectStyle: true,
 });
