@@ -2,8 +2,8 @@
   "name": "glitchify",
   "version": "1.1.0",
   "description": "A React component that adds easily glitch effect to your image",
-  "main": "dist/src/index.js",
-  "module": "dist/src/index.mjs",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
