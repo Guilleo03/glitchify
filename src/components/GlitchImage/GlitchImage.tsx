@@ -1,5 +1,6 @@
 import './../../styles/styles.css';
 import { IGlitchImage } from '../../types';
+import React from 'react';
 
 const GlitchImage = ({
   width,
@@ -8,8 +9,9 @@ const GlitchImage = ({
   variant = 'classic',
   alt = '',
   className = '',
-  intensity = 5,
+  intensity = 4,
   direction = 'horizontal',
+  obkectFit = 'cover',
 }: IGlitchImage) => {
   const imageSrc = typeof image === 'string' ? image : image.src;
 
@@ -21,6 +23,15 @@ const GlitchImage = ({
   ]
     .filter(Boolean)
     .join(' ');
+
+  const getStyle = () => {
+    return {
+      backgroundImage: `url(${imageSrc})`,
+      maskImage: `url(${imageSrc})`,
+      backgroundSize: obkectFit,
+      maskSize: obkectFit,
+    };
+  };
 
   return (
     <div
@@ -39,7 +50,7 @@ const GlitchImage = ({
           key={i}
           aria-hidden="true"
           className="glitch-img"
-          style={{ backgroundImage: `url(${imageSrc})` }}
+          style={getStyle()}
         />
       ))}
     </div>

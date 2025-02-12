@@ -6,16 +6,14 @@ const meta: Meta<typeof GlitchImage> = {
   title: 'GlitchImage',
   component: GlitchImage,
 };
-
 export default meta;
-
 export const Default: StoryObj<typeof GlitchImage> = {
   render: () => (
     <GlitchImage
-      width={'80vh'}
-      height={'80vh'}
-      variant={'colorful'}
-      image="https://img.asmedia.epimg.net/resizer/v2/VVS4IIR6GEQXHLYXHUYRRQEQRE.jpg?auth=e3150583711c028170a198a8ce25aecd40c4a1dfe18294503ac7640e551774b2&width=1472&height=1104&focal=1906%2C17"
+      width={'50vh'}
+      height={'50vh'}
+      variant={'matrix'}
+      image="https://arquitecturahb.com/wp-content/uploads/2019/05/008-382x1024.png"
     />
   ),
 };
