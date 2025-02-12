@@ -1,6 +1,6 @@
 {
   "name": "glitchify",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A React component that adds easily glitch effect to your image",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -10,7 +10,9 @@
     "url": "https://github.com/Guilleo03/glitchify"
   },
   "scripts": {
-    "build": "rm -rf dist && tsup src/index.ts --format cjs,esm --dts"
+    "build": "rm -rf dist && tsup src/index.ts --format cjs,esm --dts",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "keywords": [
     "react",
@@ -22,9 +24,18 @@
   "author": "Guille Otegui",
   "license": "MIT",
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.4",
+    "@storybook/addon-essentials": "^8.5.3",
+    "@storybook/addon-interactions": "^8.5.3",
+    "@storybook/addon-onboarding": "^8.5.3",
+    "@storybook/blocks": "^8.5.3",
+    "@storybook/react": "^8.5.3",
+    "@storybook/react-vite": "^8.5.3",
+    "@storybook/test": "^8.5.3",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "esbuild-style-plugin": "^1.6.3",
+    "storybook": "^8.5.3",
     "tsup": "^8.3.6",
     "typescript": "^5.7.3"
   },

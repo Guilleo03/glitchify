@@ -9,8 +9,9 @@ const GlitchImage = ({
   variant = 'classic',
   alt = '',
   className = '',
-  intensity = 5,
+  intensity = 4,
   direction = 'horizontal',
+  obkectFit = 'cover',
 }: IGlitchImage) => {
   const imageSrc = typeof image === 'string' ? image : image.src;
 
@@ -23,15 +24,12 @@ const GlitchImage = ({
     .filter(Boolean)
     .join(' ');
 
-  const getStyle = (i: number) => {
-    if (i === 0) {
-      return {
-        backgroundImage: `url(${imageSrc})`,
-      };
-    }
-
+  const getStyle = () => {
     return {
+      backgroundImage: `url(${imageSrc})`,
       maskImage: `url(${imageSrc})`,
+      backgroundSize: obkectFit,
+      maskSize: obkectFit,
     };
   };
 
@@ -52,7 +50,7 @@ const GlitchImage = ({
           key={i}
           aria-hidden="true"
           className="glitch-img"
-          style={getStyle(i)}
+          style={getStyle()}
         />
       ))}
     </div>

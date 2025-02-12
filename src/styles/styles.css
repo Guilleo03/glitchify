@@ -79,11 +79,11 @@
   width: calc(100% + var(--gap-horizontal) * 2);
   height: calc(100% + var(--gap-vertical) * 2);
   background-position: 50% 0;
-  background-size: cover;
+  background-repeat: no-repeat;
   background-blend-mode: var(--blend-mode-1);
   background-color: var(--blend-color-1);
   transform: translate3d(0, 0, 0);
-  mask-size: cover;
+  mask-repeat: no-repeat;
   mask-position: 50% 0;
 }
 

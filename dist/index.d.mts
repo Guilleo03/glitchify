@@ -15,8 +15,9 @@ interface IGlitchImage {
     className?: string;
     intensity?: number;
     direction?: 'horizontal' | 'vertical';
+    obkectFit?: 'cover' | 'contain';
 }
 
-declare const GlitchImage: ({ width, height, image, variant, alt, className, intensity, direction, }: IGlitchImage) => React.JSX.Element;
+declare const GlitchImage: ({ width, height, image, variant, alt, className, intensity, direction, obkectFit, }: IGlitchImage) => React.JSX.Element;
 
 export { GlitchImage, type IGlitchImage };

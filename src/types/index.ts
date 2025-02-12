@@ -11,4 +11,5 @@ export interface IGlitchImage {
   className?: string;
   intensity?: number;
   direction?: 'horizontal' | 'vertical';
+  obkectFit?: 'cover' | 'contain';
 }
